@@ -1,0 +1,16 @@
+/* .hov::before {
+    background: hsl(45 100% 70%);
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+  } */
+  
+  .hov:hover {
+    color: hsl(45 100% 70%);
+    transform: scaleX(1);
+    transform-origin: left;
+  }

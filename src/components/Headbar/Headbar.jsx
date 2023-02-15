@@ -10,20 +10,18 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import Stack from '@mui/material/Stack';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import './Headbar.css';
 
 const githubLink = 'https://github.com/pear25'
-const pages = ['WORK', 'ABOUT', 'CONTACT'];
+const pages = ['WORK', 'ABOUT', 'piersonlim@gmail.com'];
 
 const Headbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
+  const handleOpenNavMenu = (e) => {
+    setAnchorElNav(e.currentTarget);
+  }
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
@@ -61,17 +59,26 @@ const Headbar = () => {
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={()=>{console.log('here')}}
+              onClick={handleOpenNavMenu}
               color="inherit"
             >
               <MenuIcon />
             </IconButton>
+            {/* fix dropdown menu on phone  */}
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'left',
+              }}
+              PaperProps={{
+                style: {
+                  width: '120vw',
+                  // height: '100vh',
+                  backgroundColor: '#1976d2',
+                  color: '#F7F7F7'
+                }
               }}
               keepMounted
               transformOrigin={{
@@ -115,7 +122,7 @@ const Headbar = () => {
                 className='hov'
                 key={page}
                 onClick={() => console.log('click')}
-                sx={{ my: 2, mx: 1, color: 'white', display: 'block' }}
+                sx={{ my: 2, mx: 1, color: 'white', display: 'block', fontWeight: 400 }}
               >
                 {page}
               </Button>

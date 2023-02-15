@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
-import Headbar from './components/Headbar';
+import Headbar from './components/Headbar/Headbar';
+import Introduction from './components/Headbar/Introduction/Introduction';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import WorkExp from './components/Headbar/WorkExperience/WorkExp';
+
 
 function App() {
   return (
     <div className="App">
     <Headbar />
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Introduction />
+    <WorkExp />    
     </div>
   );
 }

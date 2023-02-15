@@ -1,0 +1,33 @@
+.container {
+    background-color: #181823;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-size: clamp(2rem, 2.8vw, 5rem);
+    font-weight: bold;
+  }
+  
+  .typewriter {
+      width: 38ch;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #F8F8F8;
+      animation: cursor 1s step-start infinite, 
+      text 12s steps(40) alternate infinite;
+  }
+  
+  @keyframes cursor {
+      0%, 100% { 
+      border-color: #F8F8F8; 
+    }
+  }
+  
+  @keyframes text {
+      0% { 
+      width: 0; 
+    }
+      100% { 
+      width: 38ch; 
+    }
+  }
